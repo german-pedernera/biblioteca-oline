@@ -471,8 +471,14 @@ export default function MTOList() {
                         </button>
                       )}
                     </div>
-                    {editingMto && (
+                    {editingMto ? (
                       <textarea value={editContent} onChange={e => setEditContent(e.target.value)} rows={6} className="w-full p-4 bg-slate-50 border border-slate-100 rounded-2xl text-xs outline-none focus:border-dashboard-primary transition-all font-mono shadow-inner" />
+                    ) : (
+                      <div className="bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-inner max-h-[300px] overflow-y-auto no-scrollbar">
+                        <p className="font-mono text-[11px] text-slate-600 leading-relaxed whitespace-pre-wrap">
+                          {selectedMto.content}
+                        </p>
+                      </div>
                     )}
                   </section>
 
