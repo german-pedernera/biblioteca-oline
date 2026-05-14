@@ -45,18 +45,17 @@ const SidebarContent = ({ isMobile = false, user, isAdmin, activeView, setActive
 
 
     {/* User Section - Más prominente y accesible */}
-    <div className="px-6 py-8 mt-auto border-t border-slate-100 bg-slate-50/30">
+    <div className={`px-6 py-10 mt-auto border-t border-slate-100 bg-slate-50/30 ${isMobile ? 'pb-20' : ''}`}>
       <button
         type="button"
         onClick={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          console.log('Logout clicked');
           logout();
         }}
-        className="w-full flex items-center justify-center gap-3 py-4 bg-white text-slate-500 hover:text-red-600 hover:bg-red-50 border border-slate-200 hover:border-red-100 rounded-2xl text-xs font-bold uppercase tracking-widest transition-all shadow-sm active:scale-95 cursor-pointer z-[100]"
+        className="w-full flex items-center justify-center gap-3 py-5 bg-white text-slate-600 hover:text-red-600 hover:bg-red-50 border border-slate-200 hover:border-red-100 rounded-2xl text-xs font-black uppercase tracking-widest transition-all shadow-md active:scale-95 cursor-pointer"
       >
-        <FiLogOut className="text-lg" />
+        <FiLogOut className="text-xl" />
         <span>Cerrar Sesión</span>
       </button>
     </div>
@@ -107,13 +106,13 @@ export default function Sidebar({ activeView, setActiveView, onLogout, isOpen, s
         <>
           <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 lg:hidden" onClick={() => setIsOpen(false)} />
           <aside className="fixed top-0 left-0 bottom-0 w-72 bg-dashboard-surface z-[60] shadow-2xl animate-in slide-in-from-left duration-300 lg:hidden flex flex-col">
-            <div className="absolute top-6 right-6 z-[70]">
+            <div className="absolute top-4 right-4 z-[70]">
               <button 
                 type="button"
                 onClick={() => setIsOpen(false)} 
-                className="p-3 bg-dashboard-bg rounded-2xl text-slate-400 hover:text-dashboard-primary active:scale-90 transition-all shadow-sm"
+                className="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-2xl text-slate-400 hover:text-dashboard-primary active:scale-90 transition-all shadow-lg"
               >
-                <FiX className="text-xl" />
+                <FiX className="text-2xl" />
               </button>
             </div>
             <div className="flex-1 overflow-y-auto no-scrollbar">
