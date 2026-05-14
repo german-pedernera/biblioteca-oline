@@ -492,8 +492,8 @@ export default function MTOList() {
                             <span className="text-[10px] font-bold text-slate-400 group-hover:text-dashboard-primary uppercase tracking-widest">+ Añadir Archivos</span>
                           </label>
                         </>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </section>
                 </div>
 
