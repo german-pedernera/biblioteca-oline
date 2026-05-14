@@ -393,7 +393,6 @@ export default function Home({ setActiveView }) {
           </div>
         </div>
       )}
-      <Footer />
     </>
   )
 }
@@ -513,6 +512,9 @@ function ContributionSection({ user, visibleItems }) {
             </div>
           </form>
         </div>
+      </div>
+      <div className="mt-20">
+        <Footer />
       </div>
     </div>
   )
